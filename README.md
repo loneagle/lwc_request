@@ -83,7 +83,7 @@ If you prefer to install components manually:
 
 If you need to use a different endpoint for shipment status:
 
-1. Modify the `baseUrl` constant in the CalloutService class to point to your endpoint
+1. Modify the `test` named credential for changing your endpoint
 2. Ensure your endpoint returns a string representing the shipment status
 3. Update any authentication requirements in the CalloutService class
 
