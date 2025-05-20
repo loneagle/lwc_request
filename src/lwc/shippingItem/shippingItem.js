@@ -1,18 +1,20 @@
 import {LightningElement, api} from 'lwc';
 import getOrderShipmentStatus from '@salesforce/apex/ShippingItemController.getOrderShipmentStatus';
+import Utils from "c/utility";
 
 export default class ShippingItem extends LightningElement {
 	@api recordId;
 	shipmentStatus;
 	spinnerEnabled = true;
+	utility;
 
 	connectedCallback() {
+		this.utility = new Utils(this);
 		this.updateStatus();
 	}
 
 	updateStatus() {
 		if (!this.recordId) {
-			this.shipmentStatus = 'Error - No Order Id provided';
 			this.spinnerEnabled = false;
 			return;
 		}
@@ -22,8 +24,7 @@ export default class ShippingItem extends LightningElement {
 				this.shipmentStatus = result;
 			})
 			.catch(error => {
-				console.error('Error retrieving shipment status:', error);
-				this.shipmentStatus = 'Error retrieving shipment status';
+				this.utility.handleError(error);
 			})
 			.finally(() => {
 				this.spinnerEnabled = false;
