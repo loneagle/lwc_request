@@ -1,0 +1,27 @@
+<!-- Shipment Status Item -->
+<template>
+	<lightning-card variant="narrow" class="slds-m-top_medium">
+		<div slot="title">
+			<h1 class="slds-p-left_medium">Test Shipment item</h1>
+		</div>
+		<lightning-spinner
+			lwc:if={spinnerEnabled}
+			alternative-text="Loading"
+			size="medium"
+		></lightning-spinner>
+		<div lwc:else>
+			Status: {shipmentStatus}
+		</div>
+		<div slot="footer">
+			<lightning-button
+				variant="neutral"
+				class="slds-m-horizontal_medium"
+				type="button"
+				onclick={updateStatus}
+				label="Check status"
+				title="Check status"
+			>
+			</lightning-button>
+		</div>
+	</lightning-card>
+</template>

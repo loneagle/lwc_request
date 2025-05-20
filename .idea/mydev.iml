@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="IlluminatedCloud" name="Illuminated Cloud">
+      <configuration>
+        <option name="connectionName" value="mydev" />
+        <option name="connectionType" value="OAUTH" />
+        <option name="defaultSourceRootUrl" value="file://$MODULE_DIR$/src" />
+        <option name="moduleContents">
+          <ModuleContents>
+            <option name="wildcardMetadataTypes">
+              <list>
+                <option value="ApexClass" />
+              </list>
+            </option>
+          </ModuleContents>
+        </option>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/.sf" />
+      <excludeFolder url="file://$MODULE_DIR$/.sfdx" />
+      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/temp" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+    </content>
+    <orderEntry type="jdk" jdkName="IlluminatedCloud (mydev/mydev)" jdkType="IlluminatedCloud" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="mydev/lwc_types" level="project" />
+  </component>
+</module>
